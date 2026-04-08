@@ -1,9 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alexssandra Nutricionista</title>
+<title>Alexssandra Fernandes | Nutricionista</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/feather-icons"></script>
@@ -11,42 +12,17 @@
 
 <style>
 :root {
-  --green-light: #E7F1E8;
-  --green-soft: #B7D7B2;
-  --green-main: #5E8F6A;
+  --bg: #E7F1E8;
+  --text: #2c3e2f;
+  --card: #ffffff;
   --gold: #D4A017;
 }
 
 /* DARK MODE */
 .dark-mode {
-  --green-light: #0f1115;
-  --green-soft: #1a1d22;
-  --green-main: #e6e6e6;
-}
-
-.dark-mode .card {
-  background: #1a1d22;
-  box-shadow: none;
-}
-
-.dark-mode .cards-about div {
-  background: #1a1d22;
-}
-
-.dark-mode .btn {
-  color: #000;
-}
-
-.dark-mode header {
-  background: #16181d;
-}
-
-.dark-mode body {
-  background: #0f1115;
-}
-
-.dark-mode .container {
-  background: #0f1115;
+  --bg: #0f1115;
+  --text: #e6e6e6;
+  --card: #1a1d23;
 }
 
 * {
@@ -57,176 +33,143 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: var(--green-light);
-  color: var(--green-main);
+  background: var(--bg);
+  color: var(--text);
   display:flex;
   justify-content:center;
 }
 
 .container {
   width: 100%;
-  max-width: 1200px;
-  background: var(--green-light);
-  min-height: 100vh;
+  max-width: 1100px;
 }
 
+/* HEADER */
 header {
   display:flex;
   align-items:center;
   padding:20px;
-  background:white;
+  background: var(--card);
   position:sticky;
   top:0;
+  z-index:10;
 }
 
-/* LOGO AF */
+/* LOGO */
 .logo {
-  position: relative;
-  font-family: 'Cinzel', serif;
-  font-size: 32px;
-  color: var(--green-main);
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-}
-
-.logo .a {
-  z-index: 2;
+  font-family: 'Cinzel';
+  font-size: 30px;
+  display:flex;
 }
 
 .logo .f {
-  position: relative;
-  left: -8px;
-  z-index: 1;
-}
-
-.logo::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 5px;
-  background: var(--green-main);
-  border-radius: 50%;
-  right: -6px;
-  bottom: 4px;
-  transform: rotate(30deg);
+  margin-left:-6px;
 }
 
 header h1 {
-  font-family:'Cinzel';
-  font-size:18px;
+  font-size:16px;
   margin-left:10px;
 }
 
-/* BOTÃO DARK MODE */
 #theme-toggle {
-  margin-left: auto;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--green-main);
+  margin-left:auto;
+  background:none;
+  border:none;
+  cursor:pointer;
+  color:var(--text);
 }
 
-section {
-  padding:40px 20px;
-}
-
+/* HERO */
 .hero {
   text-align:center;
+  padding:50px 20px;
 }
 
 .hero img {
-  width:200px;
-  margin-bottom:20px;
-}
-
-.hero h2 {
-  font-family:'Cinzel';
-  font-size:24px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top:15px;
-  padding:10px 20px;
-  background:var(--gold);
-  border:none;
-  border-radius:20px;
-  color:white;
-  text-decoration:none;
-}
-
-.services {
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-}
-
-.card {
-  background:white;
-  padding:20px;
-  border-radius:15px;
-  display:flex;
-  align-items:center;
-  gap:15px;
-  box-shadow:0 5px 10px rgba(0,0,0,0.05);
-  text-decoration:none;
-  color:inherit;
-}
-
-.about {
-  padding:30px 20px;
-}
-
-.about h2 {
-  font-family:'Cinzel';
+  width:180px;
   margin-bottom:15px;
 }
 
-.about p {
-  font-size:13px;
-  margin-bottom:20px;
-}
-
-.cards-about {
-  display:flex;
-  gap:10px;
-  margin-bottom:20px;
-}
-
-.cards-about div {
-  background:white;
-  padding:10px;
-  border-radius:10px;
-  flex:1;
-  text-align:center;
-  font-size:12px;
-}
-
-.social {
-  display:flex;
-  justify-content:space-around;
-}
-
-.social a {
-  text-align:center;
+.btn {
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 24px;
+  background:var(--gold);
+  color:white;
+  border-radius:25px;
   text-decoration:none;
-  color:var(--green-main);
-  font-size:12px;
+  font-weight:600;
 }
 
-footer {
+/* CONSULTORIA */
+.consultoria {
+  padding:60px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+}
+
+.consultoria h1 {
+  font-family: 'Cinzel';
+  font-size: 28px;
   text-align:center;
-  padding:20px;
-  font-size:12px;
 }
 
+.consultoria h2 {
+  font-family: 'Cinzel';
+  font-size:20px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.consultoria p {
+  font-size:14px;
+  line-height:1.6;
+}
+
+.consultoria ul {
+  padding-left:18px;
+  line-height:1.6;
+}
+
+.topo {
+  max-width:700px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.card {
+  background:var(--card);
+  padding:25px;
+  border-radius:12px;
+}
+
+.alerta {background:#fff4e5;}
+.dor {background:#ffecec;}
+.oferta {background:#f9f5e8; text-align:center;}
+
+.cta-final {
+  text-align:center;
+}
+
+.cta-final a {
+  display:inline-block;
+  padding:16px 28px;
+  background:#25D366;
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* WHATSAPP FLOAT */
 .whatsapp {
   position:fixed;
   bottom:20px;
   right:20px;
   background:#25D366;
-  padding:12px;
+  padding:14px;
   border-radius:50%;
   color:white;
 }
@@ -242,7 +185,6 @@ footer {
     <span class="a">A</span>
     <span class="f">F</span>
   </div>
-
   <h1>Alexssandra Fernandes</h1>
 
   <button id="theme-toggle">
@@ -251,77 +193,143 @@ footer {
 </header>
 
 <section class="hero">
-  <img src="SUA-FOTO-SEM-FUNDO.png.png">
-  <h2>Nutrição estratégica</h2>
-  <p>Resultados reais com planejamento personalizado</p>
-  <a class="btn" href="https://wa.me/5586994352251?text=Olá,%20quero%20agendar%20uma%20consulta" target="_blank">
-    Agendar consulta
-  </a>
+  <img src="SUA-FOTO-SEM-FUNDO.png.png" alt="Nutricionista">
+  <h2>Consultoria em Segurança Alimentar</h2>
+  <p>Adequação completa para empresas conforme normas da Vigilância Sanitária</p>
+
+  <a class="btn" href="https://wa.me/5586994352251?text=Olá!%20Vim%20pelo%20site%20e%20quero%20solicitar%20uma%20visita%20técnica%20para%20avaliação%20do%20meu%20estabelecimento." target="_blank">
+  Quero uma avaliação técnica no meu negócio
+</a>
 </section>
 
-<section class="services">
-  <a class="card" href="https://wa.me/5586994352251?text=Olá,%20quero%20Avaliação">
-    <i data-feather="activity"></i>
-    <p>Avaliação física e Acompanhamento nutricional</p>
-  </a>
+<section class="consultoria">
 
-  <a class="card" href="#">
-    <i data-feather="file-text"></i>
-    <p>Ficha técnica para estabelecimentos</p>
-  </a>
-
-  <a class="card" href="#">
-    <i data-feather="book-open"></i>
-    <p>Manual de Boas Práticas</p>
-  </a>
-
-  <a class="card" href="#">
-    <i data-feather="briefcase"></i>
-    <p>Responsabilidade Técnica</p>
-  </a>
-
-  <a class="card" href="#">
-    <i data-feather="trending-down"></i>
-    <p>Emagrecimento</p>
-  </a>
-
-  <a class="card" href="#">
-    <i data-feather="trending-up"></i>
-    <p>Hipertrofia</p>
-  </a>
-</section>
-
-<section class="about">
-  <h2>Sobre mim</h2>
+<div class="topo">
+  <h1>Seu estabelecimento pode ser interditado pela Vigilância Sanitária a qualquer momento.</h1>
   <p>
-    Sou nutricionista e acredito que comer bem não precisa ser complicado, restritivo ou distante da sua realidade.
-    Minha atuação é focada em ajudar pessoas a alcançarem seus objetivos, seja emagrecimento, ganho de massa ou mais saúde.
+    Muitos negócios operam com irregularidades sem perceber.
+    Sua empresa está realmente adequada às exigências da ANVISA?
+  </p>
+</div>
+
+<div class="card alerta">
+  <h2><i data-feather="alert-triangle"></i> Diagnóstico inicial</h2>
+
+  <p>
+    Antes de qualquer adequação, é essencial entender o cenário atual do seu estabelecimento.
+    Muitos negócios operam com falhas invisíveis no dia a dia, que passam despercebidas pela gestão.
   </p>
 
-  <div class="cards-about">
-    <div><strong>Foco em</strong><br>Atendimento personalizado</div>
-    <div><strong>Clínico</strong><br>Emagrecimento e hipertrofia</div>
-    <div><strong>Empresarial</strong><br>Consultorias alimentares</div>
-  </div>
+  <p>Faça uma avaliação rápida:</p>
 
-  <div class="social">
-    <a href="https://www.instagram.com/alexssandrafernutri/" target="_blank">
-      <i data-feather="instagram"></i><br>Instagram
-    </a>
+  <ul>
+    <li>Os POPs obrigatórios estão atualizados e disponíveis para a equipe?</li>
+    <li>Os colaboradores foram treinados em boas práticas de manipulação?</li>
+    <li>Existe controle documentado de temperatura e validade dos produtos?</li>
+    <li>O Manual de Boas Práticas está implantado e sendo seguido?</li>
+    <li>O estabelecimento está preparado para uma fiscalização hoje?</li>
+  </ul>
 
-    <a href="mailto:alexssandrafernutri@gmail.com">
-      <i data-feather="mail"></i><br>Email
-    </a>
+  <p class="risco">
+    Se houver qualquer inconsistência, sua empresa pode estar operando fora das exigências legais,
+    mesmo sem perceber.
+  </p>
+</div>
 
-    <a href="https://www.linkedin.com/in/alexssandrafernandespereira" target="_blank">
-      <i data-feather="linkedin"></i><br>LinkedIn
-    </a>
-  </div>
+<div class="card dor">
+  <h2><i data-feather="shield-off"></i> O que está acontecendo</h2>
+
+  <p>
+    A Vigilância Sanitária tem intensificado as fiscalizações em estabelecimentos alimentícios,
+    principalmente em negócios que não possuem controle adequado dos processos internos.
+  </p>
+
+  <p>
+    Empresas que não atendem às exigências da legislação estão sendo diretamente impactadas com:
+  </p>
+
+  <ul>
+    <li>Multas por não conformidade com normas sanitárias</li>
+    <li>Notificações com prazos curtos para regularização</li>
+    <li>Interdições parciais ou totais do funcionamento</li>
+    <li>Perda de credibilidade diante dos clientes</li>
+  </ul>
+
+  <p>
+    O ponto mais crítico é que muitos gestores acreditam estar “funcionando normalmente”,
+    mas na prática operam fora dos padrões exigidos — e só descobrem isso no momento da fiscalização.
+  </p>
+</div>
+
+<div class="card">
+  <h2><i data-feather="check-circle"></i> Como funciona a consultoria</h2>
+
+  <p>
+    A consultoria é estruturada para identificar, corrigir e prevenir não conformidades,
+    garantindo que seu estabelecimento opere dentro dos padrões exigidos pela Vigilância Sanitária.
+  </p>
+
+  <p>O processo inclui:</p>
+
+  <ul>
+    <li>Levantamento técnico completo das condições atuais do estabelecimento</li>
+    <li>Elaboração dos Procedimentos Operacionais Padronizados (POPs)</li>
+    <li>Desenvolvimento do Manual de Boas Práticas conforme a legislação</li>
+    <li>Treinamento da equipe com foco em aplicação prática</li>
+    <li>Plano de ação com prioridades e prazos definidos</li>
+  </ul>
+
+  <p>
+    O objetivo não é apenas “regularizar”, mas estruturar o seu negócio para manter conformidade
+    contínua e evitar problemas futuros.
+  </p>
+</div>
+
+<div class="card">
+  <h2><i data-feather="briefcase"></i> Atendo empresas como:</h2>
+  <ul>
+    <li>Padarias</li>
+    <li>Restaurantes</li>
+    <li>Lanchonetes</li>
+    <li>Mercados</li>
+  </ul>
+  <p>Teresina – PI</p>
+</div>
+
+<div class="card">
+  <h2><i data-feather="trending-up"></i> Benefícios para o seu negócio</h2>
+
+  <p>
+    A adequação sanitária não é apenas uma exigência legal — ela impacta diretamente
+    a segurança, a reputação e o crescimento da sua empresa.
+  </p>
+
+  <ul>
+    <li>Redução significativa de riscos de multas e interdições</li>
+    <li>Mais segurança e tranquilidade em fiscalizações</li>
+    <li>Padronização dos processos internos</li>
+    <li>Melhoria na organização e gestão do estabelecimento</li>
+    <li>Aumento da confiança e credibilidade com clientes</li>
+  </ul>
+
+  <p>
+    Empresas bem estruturadas não apenas evitam problemas — elas se destacam no mercado.
+  </p>
+</div>
+
+<div class="card oferta">
+  <h2><i data-feather="clipboard"></i> Avaliação inicial</h2>
+  <p>Diagnóstico completo do seu estabelecimento.</p>
+  <p><strong>Vagas limitadas</strong></p>
+</div>
+
+<div class="cta-final">
+  <a href="https://wa.me/5586994352251?text=Olá!%20Quero%20regularizar%20meu%20estabelecimento" target="_blank">
+    Solicitar diagnóstico agora
+  </a>
+</div>
+
 </section>
-
-<footer>
-  <p>© 2026 Alexssandra Fernandes</p>
-</footer>
 
 </div>
 
@@ -332,30 +340,17 @@ footer {
 <script>
 feather.replace();
 
-ScrollReveal().reveal('.hero, .card', {
+ScrollReveal().reveal('.hero, .consultoria .card', {
   delay:200,
   distance:'40px',
-  origin:'bottom',
-  duration:800
+  origin:'bottom'
 });
 
-const toggle = document.getElementById("theme-toggle");
-
-toggle.addEventListener("click", () => {
+document.getElementById("theme-toggle").onclick = () => {
   document.body.classList.toggle("dark-mode");
-
-  const icon = toggle.querySelector("i");
-
-  if (document.body.classList.contains("dark-mode")) {
-    icon.setAttribute("data-feather", "sun");
-  } else {
-    icon.setAttribute("data-feather", "moon");
-  }
-
-  feather.replace();
-});
+};
 </script>
 
 </body>
 </html>
-
+```
