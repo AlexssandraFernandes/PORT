@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alexssandra Nutricionista</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<style>
+:root {
+  --green-light: #E7F1E8;
+  --green-soft: #B7D7B2;
+  --green-main: #5E8F6A;
+  --gold: #D4A017;
+}
+
+/* DARK MODE */
+.dark-mode {
+  --green-light: #0f1115;
+  --green-soft: #1a1d22;
+  --green-main: #e6e6e6;
+}
+
+.dark-mode .card {
+  background: #1a1d22;
+  box-shadow: none;
+}
+
+.dark-mode .cards-about div {
+  background: #1a1d22;
+}
+
+.dark-mode .btn {
+  color: #000;
+}
+
+.dark-mode header {
+  background: #16181d;
+}
+
+.dark-mode body {
+  background: #0f1115;
+}
+
+.dark-mode .container {
+  background: #0f1115;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--green-light);
+  color: var(--green-main);
+  display:flex;
+  justify-content:center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  background: var(--green-light);
+  min-height: 100vh;
+}
+
+header {
+  display:flex;
+  align-items:center;
+  padding:20px;
+  background:white;
+  position:sticky;
+  top:0;
+}
+
+/* LOGO AF */
+.logo {
+  position: relative;
+  font-family: 'Cinzel', serif;
+  font-size: 32px;
+  color: var(--green-main);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.logo .a {
+  z-index: 2;
+}
+
+.logo .f {
+  position: relative;
+  left: -8px;
+  z-index: 1;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  background: var(--green-main);
+  border-radius: 50%;
+  right: -6px;
+  bottom: 4px;
+  transform: rotate(30deg);
+}
+
+header h1 {
+  font-family:'Cinzel';
+  font-size:18px;
+  margin-left:10px;
+}
+
+/* BOTÃO DARK MODE */
+#theme-toggle {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--green-main);
+}
+
+section {
+  padding:40px 20px;
+}
+
+.hero {
+  text-align:center;
+}
+
+.hero img {
+  width:200px;
+  margin-bottom:20px;
+}
+
+.hero h2 {
+  font-family:'Cinzel';
+  font-size:24px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top:15px;
+  padding:10px 20px;
+  background:var(--gold);
+  border:none;
+  border-radius:20px;
+  color:white;
+  text-decoration:none;
+}
+
+.services {
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.card {
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.05);
+  text-decoration:none;
+  color:inherit;
+}
+
+.about {
+  padding:30px 20px;
+}
+
+.about h2 {
+  font-family:'Cinzel';
+  margin-bottom:15px;
+}
+
+.about p {
+  font-size:13px;
+  margin-bottom:20px;
+}
+
+.cards-about {
+  display:flex;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.cards-about div {
+  background:white;
+  padding:10px;
+  border-radius:10px;
+  flex:1;
+  text-align:center;
+  font-size:12px;
+}
+
+.social {
+  display:flex;
+  justify-content:space-around;
+}
+
+.social a {
+  text-align:center;
+  text-decoration:none;
+  color:var(--green-main);
+  font-size:12px;
+}
+
+footer {
+  text-align:center;
+  padding:20px;
+  font-size:12px;
+}
+
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:12px;
+  border-radius:50%;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <div class="logo">
+    <span class="a">A</span>
+    <span class="f">F</span>
+  </div>
+
+  <h1>Alexssandra Fernandes</h1>
+
+  <button id="theme-toggle">
+    <i data-feather="moon"></i>
+  </button>
+</header>
+
+<section class="hero">
+  <img src="SUA-FOTO-SEM-FUNDO.png.png">
+  <h2>Nutrição estratégica</h2>
+  <p>Resultados reais com planejamento personalizado</p>
+  <a class="btn" href="https://wa.me/5586994352251?text=Olá,%20quero%20agendar%20uma%20consulta" target="_blank">
+    Agendar consulta
+  </a>
+</section>
+
+<section class="services">
+  <a class="card" href="https://wa.me/5586994352251?text=Olá,%20quero%20Avaliação">
+    <i data-feather="activity"></i>
+    <p>Avaliação física e acompanhamento nutricional</p>
+  </a>
+
+  <a class="card" href="#">
+    <i data-feather="file-text"></i>
+    <p>Ficha técnica para estabelecimentos</p>
+  </a>
+
+  <a class="card" href="#">
+    <i data-feather="book-open"></i>
+    <p>Manual de boas práticas</p>
+  </a>
+
+  <a class="card" href="#">
+    <i data-feather="briefcase"></i>
+    <p>Responsabilidade técnica</p>
+  </a>
+
+  <a class="card" href="#">
+    <i data-feather="trending-down"></i>
+    <p>Emagrecimento</p>
+  </a>
+
+  <a class="card" href="#">
+    <i data-feather="trending-up"></i>
+    <p>Hipertrofia</p>
+  </a>
+</section>
+
+<section class="about">
+  <h2>Sobre mim</h2>
+  <p>
+    Sou nutricionista e acredito que comer bem não precisa ser complicado, restritivo ou distante da sua realidade.
+    Minha atuação é focada em ajudar pessoas a alcançarem seus objetivos, seja emagrecimento, ganho de massa ou mais saúde.
+  </p>
+
+  <div class="cards-about">
+    <div><strong>Focada em</strong><br>Atendimento personalizado</div>
+    <div><strong>Clínico</strong><br>Emagrecimento e hipertrofia</div>
+    <div><strong>Empresarial</strong><br>Consultorias alimentares</div>
+  </div>
+
+  <div class="social">
+    <a href="https://www.instagram.com/alexssandrafernutri/" target="_blank">
+      <i data-feather="instagram"></i><br>Instagram
+    </a>
+
+    <a href="mailto:alexssandrafernutri@gmail.com">
+      <i data-feather="mail"></i><br>Email
+    </a>
+
+    <a href="https://www.linkedin.com/in/alexssandrafernandespereira" target="_blank">
+      <i data-feather="linkedin"></i><br>LinkedIn
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Alexssandra Fernandes</p>
+</footer>
+
+</div>
+
+<a href="https://wa.me/5586994352251" class="whatsapp">
+  <i data-feather="message-circle"></i>
+</a>
+
+<script>
+feather.replace();
+
+ScrollReveal().reveal('.hero, .card', {
+  delay:200,
+  distance:'40px',
+  origin:'bottom',
+  duration:800
+});
+
+const toggle = document.getElementById("theme-toggle");
+
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  const icon = toggle.querySelector("i");
+
+  if (document.body.classList.contains("dark-mode")) {
+    icon.setAttribute("data-feather", "sun");
+  } else {
+    icon.setAttribute("data-feather", "moon");
+  }
+
+  feather.replace();
+});
+</script>
+
+</body>
+</html>
