@@ -18,6 +18,12 @@
 }
 
 /* DARK MODE */
+.dark-mode {
+  --green-light: #0f1115;
+  --green-soft: #1a1d22;
+  --green-main: #e6e6e6;
+}
+
 .dark-mode .card {
   background: #1a1d22;
   box-shadow: none;
@@ -29,6 +35,10 @@
 
 .dark-mode .btn {
   color: #000;
+}
+
+.dark-mode header {
+  background: #16181d;
 }
 
 .dark-mode body {
@@ -69,20 +79,43 @@ header {
   top:0;
 }
 
-header div {
-  display:flex;
-  align-items:center;
-  gap:10px;
+/* LOGO AF */
+.logo {
+  position: relative;
+  font-family: 'Cinzel', serif;
+  font-size: 32px;
+  color: var(--green-main);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
 }
 
-header img {
-  width:40px;
-  height:40px;
+.logo .a {
+  z-index: 2;
+}
+
+.logo .f {
+  position: relative;
+  left: -8px;
+  z-index: 1;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  background: var(--green-main);
+  border-radius: 50%;
+  right: -6px;
+  bottom: 4px;
+  transform: rotate(30deg);
 }
 
 header h1 {
   font-family:'Cinzel';
   font-size:18px;
+  margin-left:10px;
 }
 
 /* BOTÃO DARK MODE */
@@ -205,12 +238,13 @@ footer {
 <div class="container">
 
 <header>
-  <div>
-    <img src="LOGO EM BRANCO.png">
-    <h1>Alexssandra Fernandes</h1>
+  <div class="logo">
+    <span class="a">A</span>
+    <span class="f">F</span>
   </div>
 
-  <!-- BOTÃO DARK MODE -->
+  <h1>Alexssandra Fernandes</h1>
+
   <button id="theme-toggle">
     <i data-feather="moon"></i>
   </button>
@@ -221,8 +255,8 @@ footer {
   <h2>Nutrição estratégica</h2>
   <p>Resultados reais com planejamento personalizado</p>
   <a class="btn" href="https://wa.me/5586994352251?text=Olá,%20quero%20agendar%20uma%20consulta" target="_blank">
-  Agendar consulta
-</a>
+    Agendar consulta
+  </a>
 </section>
 
 <section class="services">
@@ -260,19 +294,14 @@ footer {
 <section class="about">
   <h2>Sobre mim</h2>
   <p>
-     Sou nutricionista e acredito que comer bem não precisa ser complicado, restritivo ou distante da sua realidade.
-
-Minha atuação é focada em ajudar pessoas a alcançarem seus objetivos, seja emagrecimento, ganho de massa ou mais saúde, de forma prática, personalizada e sustentável.
-
-Também trabalho com empresas do ramo alimentício, auxiliando na organização, padronização e adequação às normas, garantindo mais segurança e qualidade nos processos.
-
-Meu objetivo é simples: transformar a nutrição em algo possível, estratégico e que realmente funcione no dia a dia.
+    Sou nutricionista e acredito que comer bem não precisa ser complicado, restritivo ou distante da sua realidade.
+    Minha atuação é focada em ajudar pessoas a alcançarem seus objetivos, seja emagrecimento, ganho de massa ou mais saúde.
   </p>
 
   <div class="cards-about">
-    <div><strong>Focada em</strong><br>Atendimento personalizado e individualizado</div>
-    <div><strong>Clínico</strong><br>Emagrecimento e Ganho de massa muscular de forma saudável e acessível</div>
-    <div><strong>Empresarial</strong><br>Consultorias em padarias, confeitarias e outros. Elaboração de POPS e Manual de Boas Práticas</div>
+    <div><strong>Focada em</strong><br>Atendimento personalizado</div>
+    <div><strong>Clínico</strong><br>Emagrecimento e hipertrofia</div>
+    <div><strong>Empresarial</strong><br>Consultorias alimentares</div>
   </div>
 
   <div class="social">
@@ -310,7 +339,6 @@ ScrollReveal().reveal('.hero, .card', {
   duration:800
 });
 
-/* DARK MODE SCRIPT */
 const toggle = document.getElementById("theme-toggle");
 
 toggle.addEventListener("click", () => {
