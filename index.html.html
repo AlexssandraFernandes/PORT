@@ -50,14 +50,60 @@ header h1 {
   font-size:18px;
 }
 
-/* HERO */
+/* HERO NOVO (LATERAL PROFISSIONAL) */
 .hero {
-  text-align:center;
-  padding:40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 20px;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.hero img {
-  width:200px;
+/* TEXTO */
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h2 {
+  font-family: 'Cinzel';
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+/* IMAGEM */
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
+
+  /* efeito premium */
+  filter: drop-shadow(0 25px 35px rgba(0,0,0,0.15));
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img img {
+    max-width: 260px;
+  }
 }
 
 /* BOTÃO PREMIUM */
@@ -257,14 +303,22 @@ ul {
 </header>
 
 <!-- HERO -->
+<!-- HERO -->
 <section class="hero">
-  <img src="aleeee.png">
-  <h2>Nutrição estratégica</h2>
-  <p>Resultados reais com planejamento personalizado</p>
 
-  <a class="btn" href="https://wa.me/5586994352251" target="_blank">
-    Agendar consulta
-  </a>
+  <div class="hero-text">
+    <h2>Nutrição estratégica</h2>
+    <p>Resultados reais com planejamento personalizado</p>
+
+    <a class="btn" href="https://wa.me/5586994352251" target="_blank">
+      Agendar consulta
+    </a>
+  </div>
+
+  <div class="hero-img">
+    <img src="aleeee.png" alt="Nutricionista">
+  </div>
+
 </section>
 
 
