@@ -17,59 +17,20 @@
   --gold: #D4A017;
 }
 
-/* DARK MODE */
-.dark-mode {
-  --green-light: #0f1115;
-  --green-soft: #1a1d22;
-  --green-main: #e6e6e6;
-}
-
-.dark-mode .card {
-  background: #1a1d22;
-  box-shadow: none;
-}
-
-.dark-mode .cards-about div {
-  background: #1a1d22;
-}
-
-.dark-mode .btn {
-  color: #000;
-}
-
-.dark-mode header {
-  background: #16181d;
-}
-
-.dark-mode body {
-  background: #0f1115;
-}
-
-.dark-mode .container {
-  background: #0f1115;
-}
-
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+* {margin:0;padding:0;box-sizing:border-box;}
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: var(--green-light);
-  color: var(--green-main);
-  display:flex;
-  justify-content:center;
+  font-family:'Montserrat';
+  background:var(--green-light);
+  color:var(--green-main);
 }
 
 .container {
-  width: 100%;
-  max-width: 1200px;
-  background: var(--green-light);
-  min-height: 100vh;
+  max-width:1000px;
+  margin:auto;
 }
 
+/* HEADER */
 header {
   display:flex;
   align-items:center;
@@ -79,87 +40,133 @@ header {
   top:0;
 }
 
-/* LOGO AF */
 .logo {
-  position: relative;
-  font-family: 'Cinzel', serif;
-  font-size: 32px;
-  color: var(--green-main);
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-}
-
-.logo .a {
-  z-index: 2;
-}
-
-.logo .f {
-  position: relative;
-  left: -8px;
-  z-index: 1;
-}
-
-.logo::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 5px;
-  background: var(--green-main);
-  border-radius: 50%;
-  right: -6px;
-  bottom: 4px;
-  transform: rotate(30deg);
+  font-family:'Cinzel';
+  font-size:28px;
 }
 
 header h1 {
-  font-family:'Cinzel';
-  font-size:18px;
   margin-left:10px;
+  font-size:18px;
 }
 
-/* BOTÃO DARK MODE */
-#theme-toggle {
-  margin-left: auto;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--green-main);
-}
-
-section {
-  padding:40px 20px;
-}
-
+/* HERO */
 .hero {
   text-align:center;
+  padding:40px 20px;
 }
 
 .hero img {
   width:200px;
-  margin-bottom:20px;
 }
 
-.hero h2 {
+/* BOTÃO PREMIUM */
+.btn {
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 24px;
+  background:linear-gradient(135deg, #D4A017, #b88912);
+  border-radius:25px;
+  color:white;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(212,160,23,0.3);
+  transition:0.3s;
+}
+
+.btn:hover {
+  transform:translateY(-3px);
+  box-shadow:0 15px 30px rgba(212,160,23,0.4);
+}
+
+/* CARDS PREMIUM */
+.services, .faq {
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  padding:30px 20px;
+}
+
+.card {
+  background:white;
+  padding:20px;
+  border-radius:18px;
+  display:flex;
+  gap:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* SEÇÕES */
+.section {
+  padding:40px 20px;
+}
+
+.section h2 {
   font-family:'Cinzel';
-  font-size:24px;
+  margin-bottom:15px;
+  letter-spacing:1px;
+}
+
+/* LISTAS */
+ul {
+  padding-left:20px;
+  line-height:1.8;
+}
+
+/* SOCIAL PREMIUM */
+.social {
+  display:flex;
+  justify-content:space-around;
+  margin-top:20px;
+}
+
+.social a {
+  background:white;
+  padding:12px;
+  border-radius:12px;
+  text-decoration:none;
+  color:var(--green-main);
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.social a:hover {
+  transform:translateY(-3px);
+}
+
+/* WHATS */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:14px;
+  border-radius:50%;
+  color:white;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
 .btn {
-  display: inline-block;
+  display:inline-block;
   margin-top:15px;
   padding:10px 20px;
   background:var(--gold);
-  border:none;
   border-radius:20px;
   color:white;
   text-decoration:none;
 }
 
-.services {
+/* CARDS */
+.services, .faq {
   display:flex;
   flex-direction:column;
   gap:15px;
+  padding:30px 20px;
 }
 
 .card {
@@ -167,60 +174,27 @@ section {
   padding:20px;
   border-radius:15px;
   display:flex;
-  align-items:center;
   gap:15px;
-  box-shadow:0 5px 10px rgba(0,0,0,0.05);
-  text-decoration:none;
-  color:inherit;
 }
 
-.about {
-  padding:30px 20px;
+/* SEÇÕES */
+.section {
+  padding:40px 20px;
 }
 
-.about h2 {
+.section h2 {
   font-family:'Cinzel';
   margin-bottom:15px;
 }
 
-.about p {
-  font-size:13px;
-  margin-bottom:20px;
-}
-
-.cards-about {
-  display:flex;
-  gap:10px;
-  margin-bottom:20px;
-}
-
-.cards-about div {
-  background:white;
-  padding:10px;
-  border-radius:10px;
-  flex:1;
-  text-align:center;
-  font-size:12px;
-}
-
+/* SOCIAL */
 .social {
   display:flex;
   justify-content:space-around;
+  margin-top:20px;
 }
 
-.social a {
-  text-align:center;
-  text-decoration:none;
-  color:var(--green-main);
-  font-size:12px;
-}
-
-footer {
-  text-align:center;
-  padding:20px;
-  font-size:12px;
-}
-
+/* WHATS */
 .whatsapp {
   position:fixed;
   bottom:20px;
@@ -230,6 +204,46 @@ footer {
   border-radius:50%;
   color:white;
 }
+
+/* FAQ INTERATIVO */
+.faq-item {
+  background: white;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+  padding: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  font-size: 14px;
+  transition: all 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 0 18px 15px;
+}
+
+.arrow {
+  transition: 0.3s;
+}
+
+.faq-item.active .arrow {
+  transform: rotate(180deg);
+}
+
 </style>
 </head>
 
@@ -238,122 +252,182 @@ footer {
 <div class="container">
 
 <header>
-  <div class="logo">
-    <span class="a">A</span>
-    <span class="f">F</span>
-  </div>
-
+  <div class="logo">AF</div>
   <h1>Alexssandra Fernandes</h1>
-
-  <button id="theme-toggle">
-    <i data-feather="moon"></i>
-  </button>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <img src="SUA-FOTO-SEM-FUNDO.png.png">
   <h2>Nutrição estratégica</h2>
   <p>Resultados reais com planejamento personalizado</p>
-  <a class="btn" href="https://wa.me/5586994352251?text=Olá,%20quero%20agendar%20uma%20consulta" target="_blank">
+
+  <a class="btn" href="https://wa.me/5586994352251" target="_blank">
     Agendar consulta
   </a>
 </section>
 
-<section class="services">
-  <a class="card" href="https://wa.me/5586994352251?text=Olá,%20quero%20Avaliação">
-    <i data-feather="activity"></i>
-    <p>Avaliação física e acompanhamento nutricional</p>
-  </a>
 
-  <a class="card" href="#">
-    <i data-feather="file-text"></i>
-    <p>Ficha técnica para estabelecimentos</p>
-  </a>
+<!-- SOBRE MIM -->
+<section class="section">
+<h2>Sobre mim</h2>
 
-  <a class="card" href="#">
-    <i data-feather="book-open"></i>
-    <p>Manual de boas práticas</p>
-  </a>
+<p>
+Nutricionista apaixonada pela área de Qualidade e Segurança alimentar. Minha atuação é voltada tanto para o acompanhamento individual de pacientes, como para consultoria em segurança alimentar para estabelecimentos alimentícios.
 
-  <a class="card" href="#">
-    <i data-feather="briefcase"></i>
-    <p>Responsabilidade técnica</p>
-  </a>
+Acredito que a nutrição vai muito além de dietas restritivas, sendo uma ferramenta de transformação. Busco sempre oferecer um atendimento humanizado, personalizado e baseado em evidências científicas, respeitando a individualidade, rotina e objetivos de cada pessoa.
 
-  <a class="card" href="#">
-    <i data-feather="trending-down"></i>
-    <p>Emagrecimento</p>
-  </a>
+Além disso, atuo auxiliando empresas a se adequarem às normas da vigilância sanitária, garantindo segurança, qualidade dos alimentos e evitando riscos legais.
 
-  <a class="card" href="#">
-    <i data-feather="trending-up"></i>
-    <p>Hipertrofia</p>
-  </a>
+Meu compromisso é ajudar você ou seu negócio a alcançar resultados reais, com responsabilidade, estratégia e cuidado.
+</p>
 </section>
 
-<section class="about">
-  <h2>Sobre mim</h2>
-  <p>
-    Sou nutricionista e acredito que comer bem não precisa ser complicado, restritivo ou distante da sua realidade.
-    Minha atuação é focada em ajudar pessoas a alcançarem seus objetivos, seja emagrecimento, ganho de massa ou mais saúde.
-  </p>
+<!-- FORMAÇÕES -->
+<section class="section">
+<h2>Formações e Cursos</h2>
 
-  <div class="cards-about">
-    <div><strong>Focada em</strong><br>Atendimento personalizado</div>
-    <div><strong>Clínico</strong><br>Emagrecimento e hipertrofia</div>
-    <div><strong>Empresarial</strong><br>Consultorias alimentares</div>
-  </div>
+<ul>
+<li>Bacharel em Nutrição</li>
+<li>Pós-Graduanda em Nutrição Esportiva</li>
+<li>Boas práticas de manipulação de alimentos</li>
+<li>Rotulagem nutricional</li>
+<li>Produção e industrialização de alimentos</li>
+<li>Conservação de alimentos</li>
+</ul>
 
-  <div class="social">
-    <a href="https://www.instagram.com/alexssandrafernutri/" target="_blank">
-      <i data-feather="instagram"></i><br>Instagram
-    </a>
-
-    <a href="mailto:alexssandrafernutri@gmail.com">
-      <i data-feather="mail"></i><br>Email
-    </a>
-
-    <a href="https://www.linkedin.com/in/alexssandrafernandespereira" target="_blank">
-      <i data-feather="linkedin"></i><br>LinkedIn
-    </a>
-  </div>
 </section>
 
-<footer>
-  <p>© 2026 Alexssandra Fernandes</p>
-</footer>
+<!-- SERVIÇOS DETALHADOS -->
+<section class="section">
+<h2>Meus Serviços</h2>
 
+<p><strong>👩‍⚕️ Avaliação e acompanhamento nutricional</strong><br>
+Atendimento personalizado com plano alimentar e acompanhamento contínuo.</p>
+
+<p><strong>🏢 Manual de Boas Práticas</strong><br>
+Documento obrigatório para estabelecimentos alimentícios.</p>
+
+<p><strong>📋 Ficha técnica</strong><br>
+Padronização, controle de custos e qualidade.</p>
+
+<p><strong>🔍 Consultoria sanitária</strong><br>
+Evite multas e mantenha seu negócio regular.</p>
+
+<a class="btn" href="https://wa.me/5586994352251">
+Entrar em contato
+</a>
+
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+<h2>Dúvidas Frequentes</h2>
+
+<div class="faq-item">
+  <div class="faq-question">
+    Preciso estar doente para procurar um nutricionista?
+    <span class="arrow">⌄</span>
+  </div>
+  <div class="faq-answer">
+    Não. O acompanhamento nutricional é indicado tanto para prevenção quanto para melhoria da qualidade de vida.
+  </div>
 </div>
 
-<a href="https://wa.me/5586994352251" class="whatsapp">
-  <i data-feather="message-circle"></i>
+<div class="faq-item">
+  <div class="faq-question">
+    O plano alimentar é muito restritivo?
+    <span class="arrow">⌄</span>
+  </div>
+  <div class="faq-answer">
+    Não. O plano é totalmente personalizado, respeitando sua rotina e preferências.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    Em quanto tempo vejo resultados?
+    <span class="arrow">⌄</span>
+  </div>
+  <div class="faq-answer">
+    Os resultados variam, mas já é possível perceber mudanças nas primeiras semanas.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    Pequenos estabelecimentos precisam de Manual de Boas Práticas?
+    <span class="arrow">⌄</span>
+  </div>
+  <div class="faq-answer">
+    Sim. Qualquer estabelecimento que manipule alimentos deve estar regularizado.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    O que acontece se meu estabelecimento não estiver adequado?
+    <span class="arrow">⌄</span>
+  </div>
+  <div class="faq-answer">
+    Você pode receber multas, notificações ou até interdição do local.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    A ficha técnica é realmente necessária?
+    <span class="arrow">⌄</span>
+  </div>
+  <div class="faq-answer">
+    Sim. Ela garante controle de custos, padronização e qualidade.
+  </div>
+</div>
+
+<a class="btn" href="https://wa.me/5586994352251">
+Tenho mais uma dúvida
 </a>
 
 <script>
+const faqs = document.querySelectorAll(".faq-item");
+
+faqs.forEach(item => {
+  item.querySelector(".faq-question").addEventListener("click", () => {
+    item.classList.toggle("active");
+  });
+});
+</script>
+
+</section>
+
+
+<!-- DIFERENCIAL -->
+<section class="section">
+<h2>Diferencial</h2>
+
+<ul>
+<li>Atendimento humanizado</li>
+<li>Estratégias personalizadas</li>
+<li>Foco em resultados reais</li>
+<li>Suporte contínuo</li>
+<li>Experiência com vigilância sanitária</li>
+</ul>
+
+</section>
+
+<!-- SOCIAL -->
+<div class="social">
+<a href="https://instagram.com/alexssandrafernutri">Instagram</a>
+<a href="mailto:alexssandrafernutri@gmail.com">Email</a>
+<a href="https://linkedin.com">LinkedIn</a>
+</div>
+
+</div>
+
+<a href="https://wa.me/5586994352251" class="whatsapp">💬</a>
+
+<script>
 feather.replace();
-
-ScrollReveal().reveal('.hero, .card', {
-  delay:200,
-  distance:'40px',
-  origin:'bottom',
-  duration:800
-});
-
-const toggle = document.getElementById("theme-toggle");
-
-toggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-
-  const icon = toggle.querySelector("i");
-
-  if (document.body.classList.contains("dark-mode")) {
-    icon.setAttribute("data-feather", "sun");
-  } else {
-    icon.setAttribute("data-feather", "moon");
-  }
-
-  feather.replace();
-});
 </script>
 
 </body>
